@@ -1,0 +1,5 @@
+
+.icon-ok:before { content: '\e800'; } /* '' */
+.icon-cancel:before { content: '\e801'; } /* '' */
+.icon-spin3:before { content: '\e832'; } /* '' */
+.icon-attention-alt:before { content: '\f12a'; } /* '' */

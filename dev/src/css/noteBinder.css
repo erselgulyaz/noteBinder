@@ -1,0 +1,364 @@
+/* line 1, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+.noteBinder {
+  position: fixed;
+  z-index: 9999999999;
+  width: 500px;
+  box-sizing: border-box;
+  text-align: center; }
+  /* line 7, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+  .noteBinder .success {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #2DAF94;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    border-radius: 5px; }
+    /* line 16, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .success .ico {
+      font-size: 24px; }
+    /* line 19, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .success span {
+      display: block;
+      width: 100%;
+      font-size: 16px; }
+    /* line 24, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .success .noteBinder-close {
+      position: absolute;
+      font-size: 16px;
+      right: 10px;
+      top: 10px;
+      cursor: pointer; }
+  /* line 32, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+  .noteBinder .error {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #F03861;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    border-radius: 5px; }
+    /* line 41, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .error .ico {
+      font-size: 24px; }
+    /* line 44, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .error span {
+      display: block;
+      width: 100%;
+      font-size: 16px; }
+    /* line 49, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .error .noteBinder-close {
+      position: absolute;
+      font-size: 16px;
+      right: 10px;
+      top: 10px;
+      cursor: pointer; }
+  /* line 57, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+  .noteBinder .info {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #F9ED69;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    border-radius: 5px; }
+    /* line 66, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .info .ico {
+      font-size: 24px; }
+    /* line 69, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .info span {
+      display: block;
+      width: 100%;
+      font-size: 16px; }
+    /* line 74, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .info .noteBinder-close {
+      position: absolute;
+      font-size: 16px;
+      right: 10px;
+      top: 10px;
+      cursor: pointer; }
+  /* line 82, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+  .noteBinder .default {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: #007AB5;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    border-radius: 5px; }
+    /* line 91, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .default .ico {
+      font-size: 24px; }
+    /* line 94, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .default span {
+      display: block;
+      width: 100%;
+      font-size: 16px; }
+    /* line 99, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+    .noteBinder .default .noteBinder-close {
+      position: absolute;
+      font-size: 16px;
+      right: 10px;
+      top: 10px;
+      cursor: pointer; }
+
+/**/
+/* line 111, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+.bounceIn {
+  -moz-animation-name: bounceInAnimate;
+  /* Firefox */
+  -moz-animation-duration: 2s;
+  /* Firefox */
+  -webkit-animation-name: bounceInAnimate;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s;
+  /* Chrome, Safari, Opera */
+  animation-name: bounceInAnimate;
+  animation-duration: 2s; }
+
+/* line 120, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/src/scss/noteBinder.scss */
+.bounceOut {
+  -moz-animation-name: bounceOutAnimate;
+  /* Firefox */
+  -moz-animation-duration: 2s;
+  /* Firefox */
+  -webkit-animation-name: bounceOutAnimate;
+  /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s;
+  /* Chrome, Safari, Opera */
+  animation-name: bounceOutAnimate;
+  animation-duration: 2s; }
+
+@-webkit-keyframes bounceInAnimate {
+  0% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  20% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  40% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  60% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  80% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); } }
+
+@-moz-keyframes bounceInAnimate {
+  0% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  20% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  40% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  60% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  80% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); } }
+
+@keyframes bounceInAnimate {
+  0% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  20% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  40% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  60% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  80% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  100% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); } }
+
+@-webkit-keyframes bounceOutAnimate {
+  0% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  20% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  40% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  60% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  80% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  100% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); } }
+
+@-moz-keyframes bounceOutAnimate {
+  0% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  20% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  40% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  60% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  80% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  100% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); } }
+
+@keyframes bounceOutAnimate {
+  0% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  20% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  40% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  60% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); }
+  80% {
+    transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1); }
+  100% {
+    transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2); } }
+
+/**/

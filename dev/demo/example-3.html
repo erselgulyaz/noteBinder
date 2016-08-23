@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="noteBinder is real time push notification plugin. If you are using noteBinder; form sending, after window load, click, change etc. form actions user friendly smaller message push on user window.">
+    <meta name="keywords" content="jquery plugin,jquery note plugin, jquery notification, jquery push">
+    <meta name="author" content="Ersel Gülyaz">
+    <meta name="classification" content="jQuery push notification plugin">
+    <meta name="copyright" content= "30 August 2016">
+	<title>noteBinder - Real Time Message Plugin</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../others/fontello/css/animation.css" />
+	<link rel="stylesheet" href="../others/fontello/css/fontello.css" />
+	<link rel="stylesheet" href="../others/style.css" />
+	<link rel="stylesheet" href="../src/css/noteBinder.css" />
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="../src/js/noteBinder.js"></script>
+</head>
+<body class="detail-page">
+	<header>
+		<a href="index.html" class="back-link">< Go Back</a>
+		<a href="http://erselgulyaz.com/projects/noteBinder/" class="logo"></a>
+		<a href="https://github.com/erselgulyaz/noteBinder" class="external-button">View Github Page</a>
+	</header>
+	<div class="column-wrapper">
+		<div class="title">
+			<h1>EXAMPLE 3</h1>
+			<p>Adding an checkbox elements. we will writing callback functions of Element on check. noteBinder message pushing and options added checkbox title.</p>
+		</div>
+		<div class="column-row">
+			<div class="col">
+				<div class="form-row">
+					<input type="checkbox" class="check-button" name="example" id="one" />
+					<label for="one">HELLO</label>
+				</div>
+				<div class="form-row">
+					<input type="checkbox" class="check-button" name="example" id="two" />
+					<label for="two">CIAO</label>
+				</div>
+				<div class="form-row">
+					<input type="checkbox" class="check-button" name="example" id="three" />
+					<label for="three">HOLA</label>
+				</div>
+				<div class="form-row">
+					<input type="checkbox" class="check-button" name="example" id="four" />
+					<label for="four">HALLO</label>
+				</div>
+			</div>
+			<div class="col">
+				<pre>
+					<xmp>$(".check-button").change(function(){</xmp><br>
+					<xmp style="padding-left: 40px;">	var itemLabel = $(this).next("label").text();</xmp><br>
+					<xmp style="padding-left: 40px;">	if ($(this).is(":checked")) {</xmp><br>
+					<xmp style="padding-left: 60px;">		var options = {</xmp><br>
+					<xmp style="padding-left: 80px;">			openEffect: "slideToVer",</xmp><br>
+					<xmp style="padding-left: 80px;">			closeEffect: "fade",</xmp><br>
+					<xmp style="padding-left: 80px;">			message: "<div class='success'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-ok'></div><span>Your checked item is '"+ itemLabel +"'</span></div>",</xmp><br>
+					<xmp style="padding-left: 80px;">			verticalPos: "bottom",</xmp><br>
+					<xmp style="padding-left: 80px;">			verticalSpace: 10,</xmp><br>
+					<xmp style="padding-left: 80px;">			horizontalPos: "left",</xmp><br>
+					<xmp style="padding-left: 60px;">		};</xmp><br>
+					<xmp style="padding-left: 40px;">	}else {</xmp><br>
+					<xmp style="padding-left: 60px;">		var options = {</xmp><br>
+					<xmp style="padding-left: 80px;">			openEffect: "slideToHor",</xmp><br>
+					<xmp style="padding-left: 80px;">			closeEffect: "slideToVer",</xmp><br>
+					<xmp style="padding-left: 80px;">			maxItem: 3,</xmp><br>
+					<xmp style="padding-left: 80px;">			message: "<div class='error'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-attention-alt'></div><span>your unchecked item is '"+ itemLabel +"'</span></div>",</xmp><br>
+					<xmp style="padding-left: 80px;">			verticalPos: "bottom",</xmp><br>
+					<xmp style="padding-left: 80px;">			verticalSpace: 10,</xmp><br>
+					<xmp style="padding-left: 80px;">			horizontalPos: "left",</xmp><br>
+					<xmp style="padding-left: 60px;">		};</xmp><br>
+					<xmp style="padding-left: 40px;">	}</xmp><br>
+					<xmp style="padding-left: 40px;">	noteBinder.init(options);</xmp><br>
+					<xmp>});</xmp><br>
+				</pre>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		$(document).ready(function(){
+			$(".check-button").change(function(){
+				var itemLabel = $(this).next("label").text();
+				if ($(this).is(":checked")) {
+					var options = {
+						openEffect: "slideToVer",
+						closeEffect: "fade",
+						message: "<div class='success'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-ok'></div><span>Your checked item is '"+ itemLabel +"'</span></div>",
+						verticalPos: "bottom",
+						verticalSpace: 10,
+						horizontalPos: "left",
+					};
+				}else {
+					var options = {
+						openEffect: "slideToHor",
+						closeEffect: "slideToVer",
+						maxItem: 3,
+						message: "<div class='error'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-attention-alt'></div><span>your unchecked item is '"+ itemLabel +"'</span></div>",
+						verticalPos: "bottom",
+						verticalSpace: 10,
+						horizontalPos: "left",
+					};
+				}
+				noteBinder.init(options);
+			});
+		});
+	</script>
+</body>
+</html>

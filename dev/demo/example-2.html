@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="noteBinder is real time push notification plugin. If you are using noteBinder; form sending, after window load, click, change etc. form actions user friendly smaller message push on user window.">
+    <meta name="keywords" content="jquery plugin,jquery note plugin, jquery notification, jquery push">
+    <meta name="author" content="Ersel Gülyaz">
+    <meta name="classification" content="jQuery push notification plugin">
+    <meta name="copyright" content= "30 August 2016">
+	<title>noteBinder - Real Time Message Plugin</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../others/fontello/css/animation.css" />
+	<link rel="stylesheet" href="../others/fontello/css/fontello.css" />
+	<link rel="stylesheet" href="../others/style.css" />
+	<link rel="stylesheet" href="../src/css/noteBinder.css" />
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="../src/js/noteBinder.js"></script>
+</head>
+<body class="detail-page">
+	<header>
+		<a href="index.html" class="back-link">< Go Back</a>
+		<a href="http://erselgulyaz.com/projects/noteBinder/" class="logo"></a>
+		<a href="https://github.com/erselgulyaz/noteBinder" class="external-button">View Github Page</a>
+	</header>
+	<div class="column-wrapper">
+		<div class="title">
+			<h1>EXAMPLE 2</h1>
+			<p>Adding an radio buttons as a survey. You will guess multiple radio buttons and one true. We are calling noteBinder message true or false answers.</p>
+		</div>
+		<div class="column-row">
+			<div class="col">
+				<div class="form-row">
+					<input type="radio" class="radio-button" name="example" id="one" />
+					<label for="one">Answer 1 (FALSE)</label>
+				</div>
+				<div class="form-row">
+					<input type="radio" class="radio-button" name="example" id="two" />
+					<label for="two">Answer 2 (TRUE)</label>
+				</div>
+				<div class="form-row">
+					<input type="radio" class="radio-button" name="example" id="three" />
+					<label for="three">Answer 3 (FALSE)</label>
+				</div>
+				<div class="form-row">
+					<input type="radio" class="radio-button" name="example" id="four" />
+					<label for="four">Answer 4 (FALSE)</label>
+				</div>
+			</div>
+			<div class="col">
+				<pre>
+					<xmp>$(".radio-button").change(function(){</xmp><br>
+					<xmp style="padding-left: 40px;">	if ($(this).attr("id") == "two") {</xmp><br>
+					<xmp style="padding-left: 60px;">		var options = {</xmp><br>
+					<xmp style="padding-left: 80px;">			openEffect: "fade",</xmp><br>
+					<xmp style="padding-left: 80px;">			closeEffect: "slideToVer",</xmp><br>
+					<xmp style="padding-left: 80px;">			maxItem: 5,</xmp><br>
+					<xmp style="padding-left: 80px;">			message: "<div class='success'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-ok'></div><span>your selection is true :)</span></div>",</xmp><br>
+					<xmp style="padding-left: 80px;">			verticalPos: "bottom",</xmp><br>
+					<xmp style="padding-left: 80px;">			horizontalPos: "right",</xmp><br>
+					<xmp style="padding-left: 60px;">		};</xmp><br>
+					<xmp style="padding-left: 40px;">	}else{</xmp><br>
+					<xmp style="padding-left: 60px;">		var options = {</xmp><br>
+					<xmp style="padding-left: 80px;">			openEffect: "bounce",</xmp><br>
+					<xmp style="padding-left: 80px;">			closeEffect: "slideToHor",</xmp><br>
+					<xmp style="padding-left: 80px;">			maxItem: 3,</xmp><br>
+					<xmp style="padding-left: 80px;">			waiting: 4000,</xmp><br>
+					<xmp style="padding-left: 80px;">			message: "<div class='error'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-attention-alt'></div><span>your selection is false :(</span></div>",</xmp><br>
+					<xmp style="padding-left: 80px;">			verticalPos: "bottom",</xmp><br>
+					<xmp style="padding-left: 80px;">			horizontalPos: "right",</xmp><br>
+					<xmp style="padding-left: 60px;">		};</xmp><br>
+					<xmp style="padding-left: 40px;">	}</xmp><br>
+					<xmp style="padding-left: 40px;">	noteBinder.init(options);</xmp><br>
+					<xmp>});</xmp><br>
+				</pre>
+			</div>
+		</div>
+
+	</div>
+	<script>
+		$(document).ready(function(){
+
+			$(".radio-button").change(function(){
+				if ($(this).attr("id") == "two") {
+					var options = {
+						openEffect: "fade",
+						closeEffect: "slideToVer",
+						maxItem: 5,
+						message: "<div class='success'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-ok'></div><span>your selection is true :)</span></div>",
+						verticalPos: "bottom",
+						horizontalPos: "right",
+						posForGroup: "before"
+					};
+				}else{
+					var options = {
+						openEffect: "bounce",
+						closeEffect: "slideToHor",
+						maxItem: 3,
+						waiting: 4000,
+						message: "<div class='error'><a class='ico icon-cancel noteBinder-close'></a><div class='ico icon-attention-alt'></div><span>your selection is false :(</span></div>",
+						verticalPos: "bottom",
+						horizontalPos: "right",
+						posForGroup: "before"
+					};
+				}
+				noteBinder.init(options);
+			});
+		});
+	</script>
+</body>
+</html>

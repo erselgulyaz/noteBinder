@@ -1,0 +1,304 @@
+/* line 1, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+body {
+  font-family: 'Open Sans', sans-serif; }
+  /* line 3, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  body.detail-page {
+    background-color: #eeeeee; }
+
+/* line 8, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* line 14, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+  transition: 0.2s ease-out; }
+
+/* line 21, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  margin-left: 0;
+  margin-right: 0;
+  width: auto; }
+
+/* line 28, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.container {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto; }
+
+/* line 34, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+header {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  background-color: #007AB5;
+  text-align: center; }
+  /* line 40, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  header .back-link {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 25px 16px;
+    text-decoration: none; }
+  /* line 50, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  header .logo {
+    display: inline-block;
+    width: 200px;
+    height: 72px;
+    background: url(img/logo-small.png) no-repeat center center #007AB5; }
+  /* line 56, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  header .external-button {
+    position: absolute;
+    right: 15px;
+    top: 15px; }
+
+/* line 63, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  border-right: 1px solid #dddddd; }
+  /* line 70, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .sidebar .logo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background: url(img/logo.png) no-repeat center center #007AB5; }
+  /* line 76, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    /* line 81, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .sidebar ul li a {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      color: #212121;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: .3s ease-out; }
+      /* line 90, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .sidebar ul li a:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        background-color: #eeeeee;
+        transition: .3s ease-out;
+        z-index: -2; }
+      /* line 101, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .sidebar ul li a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 10px;
+        height: 100%;
+        background-color: #007AB5;
+        transition: .3s ease-out;
+        z-index: -1;
+        opacity: 0; }
+      /* line 114, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .sidebar ul li a:hover:before {
+        width: 100%; }
+      /* line 117, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .sidebar ul li a:hover:after {
+        opacity: 1; }
+      /* line 122, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .sidebar ul li a.active:before {
+        width: 100%; }
+      /* line 125, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .sidebar ul li a.active:after {
+        opacity: 1; }
+
+/* line 134, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.content {
+  width: calc(100% - 300px);
+  padding-left: 300px; }
+
+/* line 140, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+section.section {
+  display: block;
+  padding: 24px 24px 24px 0;
+  margin-left: 24px;
+  border-bottom: 1px solid #dddddd;
+  max-width: 800px; }
+
+/* line 149, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+h1 {
+  font-size: 36px;
+  line-height: 54px;
+  padding-bottom: 16px; }
+
+/* line 155, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+h2 {
+  font-size: 32px;
+  line-height: 46px;
+  padding-bottom: 16px; }
+
+/* line 161, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+p {
+  font-size: 18px;
+  line-height: 27px;
+  padding-bottom: 24px; }
+
+/* line 167, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.txt-link {
+  color: #212121;
+  text-decoration: none;
+  border-bottom: 1px solid #212121;
+  transition: .3s ease-out;
+  font-size: 18px;
+  line-height: 27px; }
+  /* line 174, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .txt-link:hover {
+    border-color: transparent; }
+
+/* line 179, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+pre {
+  display: inline-block;
+  background-color: #dddddd;
+  border-radius: 5px;
+  text-align: left;
+  width: 480px;
+  padding: 24px;
+  font-size: 18px;
+  line-height: 27px;
+  font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
+  margin-bottom: 24px;
+  overflow-x: auto; }
+  /* line 192, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  pre xmp {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    white-space: nowrap;
+    float: none; }
+  /* line 199, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  pre.full {
+    width: 100%; }
+
+/* line 204, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.table {
+  border: 1px solid #dddddd; }
+  /* line 206, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .table tr {
+    height: 56px; }
+    /* line 208, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .table tr td, .table tr th {
+      font-weight: 400;
+      text-align: left;
+      border-bottom: 1px solid #dddddd;
+      border-right: 1px solid #dddddd;
+      padding-left: 8px; }
+      /* line 214, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+      .table tr td:last-child, .table tr th:last-child {
+        border-right: none; }
+    /* line 219, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .table tr:last-child td {
+      border-bottom: none; }
+  /* line 226, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .table thead tr th {
+    color: #aaaaaa;
+    font-size: 18px;
+    line-height: 24px; }
+  /* line 235, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .table tbody tr td {
+    color: #212121;
+    font-size: 18px;
+    line-height: 24px; }
+
+/* line 245, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.demos-list li {
+  display: table;
+  width: 100%;
+  min-height: 80px;
+  border-bottom: 1px solid #dddddd; }
+  /* line 250, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .demos-list li div {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    width: 20%; }
+    /* line 255, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .demos-list li div:last-child {
+      font-size: 16px;
+      line-height: 22px;
+      padding-left: 14px;
+      width: 80%; }
+
+/* line 265, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #007AB5;
+  border-radius: 5px; }
+
+/* line 275, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.column-wrapper {
+  position: relative;
+  width: 960px;
+  margin: 0 auto; }
+  /* line 279, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .column-wrapper .column-row {
+    display: table; }
+    /* line 281, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .column-wrapper .column-row + .column-row {
+      border-top: 1px solid #aaa;
+      padding-top: 32px; }
+  /* line 286, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .column-wrapper .title {
+    width: 100%;
+    text-align: center; }
+    /* line 289, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .column-wrapper .title h1 {
+      padding: 16px 0; }
+  /* line 293, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+  .column-wrapper .col {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%; }
+    /* line 297, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+    .column-wrapper .col:first-child {
+      text-align: center; }
+
+/* line 303, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.form-input {
+  width: 250px;
+  height: 48px;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+  outline: none;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px; }
+
+/* line 315, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.radio-button {
+  margin-bottom: 20px; }
+
+/* line 319, D:/Workspace/JsDevelopment/NOTEBINDER/noteBinder/dev/others/style.scss */
+.external-button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #007AB5;
+  background-color: #ffffff;
+  text-decoration: none; }

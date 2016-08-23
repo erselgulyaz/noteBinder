@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="noteBinder is real time push notification plugin. If you are using noteBinder; form sending, after window load, click, change etc. form actions user friendly smaller message push on user window.">
+    <meta name="keywords" content="jquery plugin,jquery note plugin, jquery notification, jquery push">
+    <meta name="author" content="Ersel Gülyaz">
+    <meta name="classification" content="jQuery push notification plugin">
+    <meta name="copyright" content= "30 August 2016">
+	<title>noteBinder - Real Time Message Plugin</title>
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="../others/style.css" />
+	<link rel="stylesheet" href="../src/css/noteBinder.css" />
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="../src/js/noteBinder.js"></script>
+</head>
+<body>
+	<div class="sidebar">
+		<div class="logo"></div>
+		<ul>
+			<li><a href="#welcome">WELCOME</a></li>
+			<li><a href="#installation">INSTALLATION</a></li>
+			<li><a href="#options">OPTIONS</a></li>
+			<li><a href="#how-to-use">HOW TO USE</a></li>
+			<li><a href="#demos">DEMOS</a></li>
+			<li><a href="#support">CONTACT</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		
+		<section class="section" id="welcome">
+			<h1>Say Hello to noteBinder :)</h1>
+			<p>
+				noteBinder is real time push notification plugin. If you are using noteBinder; form sending, after window load, click, change etc. form actions user friendly smaller message push on user window.
+			</p>
+			<p>
+				noteBinder is customizable your claims. For example; message alignment is right and top with plugin default options. If you are  change verticalPos and horizontalPos, change this option and message alignment make left and bottom.
+			</p>
+			<p>
+				<a href="#options" class="txt-link">See other options</a>
+			</p>
+		</section>
+
+		<section class="section" id="installation">
+			<h2>Installation</h2>
+			<p>noteBinder installation and customizing is very easy. First one <a href="javascript:;" class="txt-link">DOWNLOAD</a> with github link and export plugin files.</p>
+			<pre class="full">
+				<xmp>
+					<link rel="stylesheet" href="../src/css/noteBinder.css" />
+				</xmp>
+				<br>
+				<xmp>
+					<script src="../src/js/noteBinder.js"></script>
+				</xmp>
+			</pre>
+			<p>And calling plugin initialization.</p>
+			<pre class="full">
+				<xmp>
+					noteBinder.init();
+				</xmp>
+			</pre>
+		</section>
+
+		<section class="section" id="options">
+			<h2>Options</h2>
+			<p>Doesn't my default properties fit you? noteBinder options are customizable your claims :) You are calling noteBinder init function create one variable and send to options. For example:</p>
+
+			<table class="table">
+				<thead>
+					<th>Name</th>
+					<th>Default</th>
+					<th>Description</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>openEffect</td>
+						<td>fade</td>
+						<td>Message opened effect. Parameters: fade,bounce,slideToVer,slideToHor</td>
+					</tr>
+					<tr>
+						<td>closeEffect</td>
+						<td>fade</td>
+						<td>Message closed effect. Parameters: fade,bounce,slideToVer,slideToHor</td>
+					</tr>
+					<tr>
+						<td>maxItem</td>
+						<td>3</td>
+						<td>Message length on screen. Use it integer parameters</td>
+					</tr>
+					<tr>
+						<td>waiting</td>
+						<td>5000</td>
+						<td>Message second parameter for visibility.</td>
+					</tr>
+					<tr>
+						<td>message</td>
+						<td>hi!</td>
+						<td>This is message content. Your change this text or add html code blocks.</td>
+					</tr>
+					<tr>
+						<td>verticalPos</td>
+						<td>top</td>
+						<td>Message vertical alignment for screen size. Other parameters: top , center , bottom</td>
+					</tr>
+					<tr>
+						<td>verticalSpace</td>
+						<td>32</td>
+						<td>message spaces for your verticalPos parameters. For example: you use it verticalPos: top , message top space is 32px</td>
+					</tr>
+					<tr>
+						<td>horizontalPos</td>
+						<td>right</td>
+						<td>Message horizontal alignment for screen size. Other parameters: left , center , right</td>
+					</tr>
+					<tr>
+						<td>horizontalSpace</td>
+						<td>32</td>
+						<td>message spaces for your horizontalPos parameters. For example: you use it horizontalPos: right , message right space is 32px</td>
+					</tr>
+					<tr>
+						<td>clickClose</td>
+						<td>false</td>
+						<td>If you are set true parameters, find your message template closeElement parameter. And click for this class your message is removed.</td>
+					</tr>
+					<tr>
+						<td>wrapClass</td>
+						<td>noteBinder</td>
+						<td>Your message wrapped div on use this class. </td>
+					</tr>
+					<tr>
+						<td>closeElement</td>
+						<td>false</td>
+						<td>If you are set ".close" parameters, find your message template "close" class. And your message is removed click for this class. But first set true parameter "clickClose" options.</td>
+					</tr>
+					<tr>
+						<td>posForGroup</td>
+						<td>before</td>
+						<td>This option for new messages. For example set parameter is "before", New message added top positions for other messages. This option see the verticalPos elements. Other parameters: after</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+
+		<section class="section" id="how-to-use">
+			<h2>How to Use</h2>
+			<p>First one create one variable</p>
+			<pre class="full">
+				<xmp>
+					var options;
+				</xmp>
+			</pre>
+			<p>
+				Then look at the <a href="#options" class="txt-link">Options</a> section. Because all parameters and contents writing this section. Copy the properties you want to change and append to variables. 
+			</p>
+			<pre class="full">
+				<xmp>
+					var options = {
+						verticalPos: "center",
+						horizontalPos: "center",
+						posForGroup: "after"
+					}
+				</xmp>
+			</pre>
+			<p>
+				Adding new features you select a call noteBinder 
+			</p>
+			<pre class="full">
+				<xmp>
+					noteBinder.init(options);
+				</xmp>
+			</pre>
+		</section>
+
+		<section class="section" id="demos">
+			<h2>Demos</h2>
+			<p>See the all options!</p>
+			
+			<ul class="demos-list">
+				<li>
+					<div>
+						<a href="example-1.html" class="button">EXAMPLE 1</a>
+					</div>
+					<div>
+						Exiting in the input element is called I prepared a sample of noteBinder message. In writing or if there is no will change the messages.
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="example-2.html" class="button">EXAMPLE 2</a>
+					</div>
+					<div>
+						Adding an radio buttons as a survey. You will guess multiple radio buttons and one true. We are calling noteBinder message true or false answers.
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href="example-3.html" class="button">EXAMPLE 3</a>
+					</div>
+					<div>
+						Adding an checkbox elements. we will writing callback functions of Element on check. noteBinder message pushing and options added checkbox title. 
+					</div>
+				</li>
+			</ul>
+
+		</section>
+
+		<section class="section" id="support">
+			<h2>Contact</h2>
+			<p>Support and Feedback is <a href="mailto:erselgulyaz@gmail.com?subject=noteBinder Feedbacks" class="txt-link">erselgulyaz@gmail.com</a> or <a href="https://github.com/erselgulyaz/noteBinder" class="txt-link">Github Page (Issues)</a></p>
+		</section>
+
+
+
+	</div>
+
+
+</body>
+</html>
