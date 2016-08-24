@@ -366,6 +366,7 @@ var noteBinder = {
 			});
 		}
 
+		noteBinder.waiting(options.waiting,options,item);
 		noteBinder.clickClose(options.clickClose,options,item);
 
 	},
