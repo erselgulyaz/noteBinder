@@ -4,6 +4,7 @@ var noteBinderLength = 0;
 var noteBinderDefaults = {
 	openEffect: "fade",
 	closeEffect: "fade",
+	horAnimate: false,
 	maxItem: 3,
 	waiting: 5000,
 	message: "hi!",
@@ -26,7 +27,7 @@ var noteBinder = {
 		if(value == "slideToHor") {
 			if (options.horizontalPos == "left") {
 				item.css({
-					"left" : - item.outerWidth(true) - 100
+					"left" : - $(window).outerWidth(true) - 100
 				});
 				setTimeout(function(){
 					item.fadeIn(function(){
@@ -39,7 +40,7 @@ var noteBinder = {
 			
 			if (options.horizontalPos == "right") {
 				item.css({
-					"right" : - item.outerWidth(true) - 100
+					"right" : - $(window).outerWidth(true) - 100
 				});
 				setTimeout(function(){
 					item.fadeIn(function(){
@@ -53,14 +54,10 @@ var noteBinder = {
 			if (options.horizontalPos == "center") {
 				item.css({
 					"left" : - item.outerWidth(true) - 100
+				}).show();
+				item.animate({
+					"left" : ($(window).width() / 2) - (item.outerWidth() / 2)
 				});
-				setTimeout(function(){
-					item.fadeIn(function(){
-						item.animate({
-							"left" : options.horizontalSpace
-						},250);
-					});
-				},250);
 			}
 		}
 
@@ -134,6 +131,88 @@ var noteBinder = {
 			},2000);
 		}
 
+		if (value == "flipToVer") {
+			if (options.verticalPos == "top") {
+				item.css({
+					"top" : - item.outerHeight(true) - 100
+				}).show().addClass("flipper");
+				if ($.isNumeric(posValue)) {
+					item.animate({
+						"top" : posValue
+					});
+				}else{
+					item.animate({
+						"top" : options.verticalSpace
+					});
+				}
+			}
+			if (options.verticalPos == "bottom") {
+				item.css({
+					"bottom" : - item.outerHeight(true) - 100
+				}).show().addClass("flipper");
+				if ($.isNumeric(posValue)) {
+					item.animate({
+						"bottom" : posValue
+					});
+				}else{
+					item.animate({
+						"bottom" : options.verticalSpace
+					});
+				}
+			}
+			if (options.verticalPos == "center") {
+				item.css({
+					"top" : - item.outerHeight(true) - 100
+				}).show().addClass("flipper");
+				if ($.isNumeric(posValue)) {
+					item.animate({
+						"top" : posValue
+					});
+				}else{
+					item.animate({
+						"top" : ($(window).outerHeight(true) / 2) - (item.outerHeight(true) / 2)
+					});
+				}
+			}
+
+			setTimeout(function(){
+				item.removeClass("flipper");
+			},2000);
+
+		}
+			
+		if (value == "flipToHor") {
+			if (options.horizontalPos == "left") {
+				item.css({
+					"left" : - item.outerWidth(true) - 100
+				}).show().addClass("flipper");
+				item.animate({
+					"left" : options.horizontalSpace
+				});
+			}
+			if (options.horizontalPos == "right") {
+				item.css({
+					"right" : - item.outerWidth(true) - 100
+				}).show().addClass("flipper");
+				item.animate({
+					"right" : options.horizontalSpace
+				});
+			}
+			if (options.horizontalPos == "center") {
+				item.css({
+					"left" : - item.outerWidth(true) - 100
+				}).show().addClass("flipper");
+				item.animate({
+					"left" : ($(window).outerWidth(true) / 2) - (item.outerWidth(true) / 2)
+				});
+			}
+
+			setTimeout(function(){
+				item.removeClass("flipper")
+			},2000);
+
+		}
+
 	},
 	closeEffect: function(value,options,item) {
 		if (value == "fade") {
@@ -197,6 +276,72 @@ var noteBinder = {
 					item.remove();
 				});
 			},1700);
+		}
+
+		if (value == "flipToVer") {
+			if (options.verticalPos == "top") {
+				item.addClass("flipper");
+				setTimeout(function(){
+					item.animate({
+						"top" : - item.outerHeight(true) - 100
+					},function(){
+						item.remove();
+					});
+				},500);
+			}
+			if (options.verticalPos == "bottom") {
+				item.addClass("flipper");
+				setTimeout(function(){
+					item.animate({
+						"bottom" : - item.outerHeight(true) - 100
+					},function(){
+						item.remove();
+					});
+				},500);
+			}
+			if (options.verticalPos == "center") {
+				item.addClass("flipper");
+				setTimeout(function(){
+					item.animate({
+						"top" : - item.outerHeight(true) - 100
+					},function(){
+						item.remove();
+					});
+				},500);
+			}
+		}
+
+		if (value == "flipToHor") {
+			if (options.horizontalPos == "left") {
+				item.addClass("flipper");
+				setTimeout(function(){
+					item.animate({
+						"left" : - item.outerWidth(true) - 100
+					},function(){
+						item.remove();
+					});
+				},500);
+			}
+			if (options.horizontalPos == "right") {
+				item.addClass("flipper");
+				setTimeout(function(){
+					item.animate({
+						"right" : - item.outerWidth(true) - 100
+					},function(){
+						item.remove();
+					});
+				},500);
+			}
+			if (options.horizontalPos == "center") {
+				item.addClass("flipper");
+				setTimeout(function(){
+					item.animate({
+						"left" : - item.outerWidth(true) - 100
+					},function(){
+						item.remove();
+					});
+				},500);
+			}
 		}
 
 	},
@@ -348,23 +493,27 @@ var noteBinder = {
 
 		}
 
-		if (options.horizontalPos == "left") {
-			item.css({
-				"left" : options.horizontalSpace
-			});
+		if (options.horAnimate == false) {
+			if (options.horizontalPos == "left") {
+				item.css({
+					"left" : options.horizontalSpace
+				});
+			}
+
+			if (options.horizontalPos == "right" && options.openEffect != "slideToHor") {
+				item.css({
+					"right" : options.horizontalSpace
+				});
+			}
+			
+			if (options.horizontalPos == "center") {
+				item.css({
+					"left" : ($(window).width() / 2) - (item.outerWidth(true) / 2)
+				});
+			}
 		}
 
-		if (options.horizontalPos == "right") {
-			item.css({
-				"right" : options.horizontalSpace
-			});
-		}
 
-		if (options.horizontalPos == "center") {
-			item.css({
-				"left" : ($(window).width() / 2) - (item.outerWidth(true) / 2)
-			});
-		}
 
 		noteBinder.waiting(options.waiting,options,item);
 		noteBinder.clickClose(options.clickClose,options,item);

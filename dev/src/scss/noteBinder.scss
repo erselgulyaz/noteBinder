@@ -126,6 +126,18 @@
     animation-duration: 2s;
 }
 
+.flipper {
+    -moz-animation-name: flipAnimate; /* Firefox */
+    -moz-animation-duration: 2s; /* Firefox */
+    -webkit-animation-name: flipAnimate; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: flipAnimate;
+    animation-duration: 2s;
+}
+
+
+
+// bounceInAnimate
 @-webkit-keyframes bounceInAnimate {
     0% {
 		transform: scale(1.2);
@@ -259,8 +271,7 @@
     }
 }
 
-
-
+// bounceOutAnimate
 @-webkit-keyframes bounceOutAnimate {
     0% {
 		transform: scale(1);
@@ -394,5 +405,14 @@
     }
 }
 
+// flipAnimate
+@keyframes flipAnimate {
+	from {
+		transform: rotateX(0deg);
+	}
+	to {
+		transform: rotateX(720deg);
+	}
+}
 
 /**/
